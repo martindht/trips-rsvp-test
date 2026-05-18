@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trips RSVP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈️</text></svg>">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1> Trips RSVP</h1>
+            <p> RSVP for available trips!</p>
+        </div>
+
+        <div class="events-grid" id ="eventsGrid">
+            <div class ="loading">Loading events...</div>
+        </div>
+    </div> 
+
+    <div class="modal" id="eventModal">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <div class="modal-content" id="modalContent">
+            <!-- Event details will be populated here -->  
+
+        </div>     
+    </div>
+
+
+    <script src="utils.js"></script>
+    <script src="events.js"></script>
+    <script src="app.js"></script>
+
+
+
+
+
+
+</body>
+</html>
