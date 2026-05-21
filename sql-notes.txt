@@ -1,0 +1,51 @@
+CREATE TABLE events (
+    event_id VARCHAR(64) PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    description TEXT,
+    start_at DATETIME NOT NULL ,
+    venue VARCHAR(200),
+    banner_url VARCHAR(300),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+SELECT * FROM events;
+
+INSERT INTO events (event_id, title, description, start_at, venue, banner_url)
+VALUES
+    (
+    'japan-trip-2026',
+     'Japan Trip 2026',
+     'Join us for a trip through the 3 largest cities in Japan',
+     '2026-05-24 9:00:00',
+     'ICHIRAN Shinjuku Station Central Exit',
+     ''
+    ),
+    (
+     'balkan-trip-2026',
+     'Balkan Roadtrip Summer 2026',
+     'Drive across Croatia, Albania, Bosnia, and Montenegro',
+     '2026-08-14 12:00:00',
+     'Old Bridge Mostar',
+     ''
+    );
+
+UPDATE events
+SET banner_url = 'https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=800'
+WHERE event_id = 'japan-trip-2026';
+
+UPDATE events
+SET banner_url = 'https://images.unsplash.com/photo-1575540291670-8d3b26f7d327?w=800'
+WHERE event_id = 'balkan-trip-2026';
+
+SELECT * FROM events WHERE event_id = 'balkan-trip-2026';
+
+INSERT INTO events (event_id, title, description, start_at, venue, banner_url)
+VALUES
+    (
+     'guatemala-trip-2026',
+     'Guatemala - Lake Atitlan',
+     'Hike Volcan de Fuego and swim in Lake Atitlan',
+     '2026-09-14 14:00:00',
+     'Reserva Natural Cerro Tzankujil',
+     'https://images.unsplash.com/photo-1528543010705-e7e75169b717?w=800'
+    )
